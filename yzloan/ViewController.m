@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property(nonatomic,strong) UIWebView *webView;
+
 @end
 
 @implementation ViewController
@@ -17,12 +19,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSString *urlString = @"http://app.91feixiong.com/xxloan/index.html";
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIWebView *)webView {
+    if (!_webView) {
+        _webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [self.view addSubview:_webView];
+    }
+    return _webView;
 }
 
 
