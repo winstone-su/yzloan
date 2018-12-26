@@ -10,6 +10,11 @@
 
 @interface CustomNavigationView ()
 
+#define UIColorFromRGBA(rgbValue, alphaValue)		[UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 \
+green:((float)(((rgbValue) & 0x00FF00) >> 8))/255.0 \
+blue:((float)((rgbValue) & 0x0000FF))/255.0 \
+alpha:(alphaValue)]
+
 @end
 
 
@@ -46,6 +51,7 @@
 //    self.titleLabel.center = self.center;
     CGFloat centerX = (self.frame.size.width - 150)/2+ 37.5;
     self.titleLabel.frame = CGRectMake(centerX, 34,150, 20);
+    self.titleLabel.textColor = UIColorFromRGBA(0x3d3d3d, 1.0);
     [self.titleLabel sizeToFit];
     
     self.backButton.frame = CGRectMake(15, 34, 20, 20);
