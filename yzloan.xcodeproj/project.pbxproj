@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720262E221CCFCCA006664FF /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262DB21CCFCCA006664FF /* WebViewJavascriptBridge.m */; };
+		720262E321CCFCCA006664FF /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262DD21CCFCCA006664FF /* WebViewJavascriptBridge_JS.m */; };
+		720262E421CCFCCA006664FF /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262DF21CCFCCA006664FF /* WebViewJavascriptBridgeBase.m */; };
+		720262E521CCFCCA006664FF /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262E121CCFCCA006664FF /* WKWebViewJavascriptBridge.m */; };
+		72182CF621CF148300E09662 /* YZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72182CF521CF148300E09662 /* YZWebViewController.m */; };
+		72182CF921CF59C400E09662 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 72182CF821CF59C400E09662 /* example.html */; };
+		7247E86E21CB9EB7008DE09A /* CustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7247E86D21CB9EB7008DE09A /* CustomNavigationView.m */; };
+		7247E87121CBA7B1008DE09A /* BackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7247E87021CBA7B1008DE09A /* BackButton.m */; };
 		72734E9421C916DA00DC1E50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72734E9321C916DA00DC1E50 /* main.m */; };
 		72734E9721C916DA00DC1E50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72734E9621C916DA00DC1E50 /* AppDelegate.m */; };
 		72734E9A21C916DA00DC1E50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72734E9921C916DA00DC1E50 /* ViewController.m */; };
@@ -15,6 +23,10 @@
 		72734EA221C916DA00DC1E50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72734EA021C916DA00DC1E50 /* LaunchScreen.storyboard */; };
 		72734EAD21C916DA00DC1E50 /* yzloanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72734EAC21C916DA00DC1E50 /* yzloanTests.m */; };
 		72734EB821C916DA00DC1E50 /* yzloanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72734EB721C916DA00DC1E50 /* yzloanUITests.m */; };
+		72C614EA21CDEB9F00859A8F /* KeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C614E721CDEB9F00859A8F /* KeyChainStore.m */; };
+		72C614EB21CDEB9F00859A8F /* NSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C614E921CDEB9F00859A8F /* NSUtil.m */; };
+		72D79F1A21CFD4F1001E5313 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D79F1921CFD4F1001E5313 /* MBProgressHUD.m */; };
+		72F16DD421CBAD8900F85AE2 /* back_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 72F16DD321CBAD8900F85AE2 /* back_gray.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		720262DA21CCFCCA006664FF /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		720262DB21CCFCCA006664FF /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		720262DC21CCFCCA006664FF /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		720262DD21CCFCCA006664FF /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		720262DE21CCFCCA006664FF /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		720262DF21CCFCCA006664FF /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		720262E021CCFCCA006664FF /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		720262E121CCFCCA006664FF /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		72182CF421CF148300E09662 /* YZWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZWebViewController.h; sourceTree = "<group>"; };
+		72182CF521CF148300E09662 /* YZWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZWebViewController.m; sourceTree = "<group>"; };
+		72182CF821CF59C400E09662 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
+		7247E86C21CB9EB7008DE09A /* CustomNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomNavigationView.h; path = Views/CustomNavigationView.h; sourceTree = "<group>"; };
+		7247E86D21CB9EB7008DE09A /* CustomNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomNavigationView.m; path = Views/CustomNavigationView.m; sourceTree = "<group>"; };
+		7247E86F21CBA7B1008DE09A /* BackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackButton.h; path = Views/BackButton.h; sourceTree = "<group>"; };
+		7247E87021CBA7B1008DE09A /* BackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackButton.m; path = Views/BackButton.m; sourceTree = "<group>"; };
 		72734E8F21C916DA00DC1E50 /* yzloan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yzloan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72734E9321C916DA00DC1E50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72734E9521C916DA00DC1E50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +78,13 @@
 		72734EB321C916DA00DC1E50 /* yzloanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yzloanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72734EB721C916DA00DC1E50 /* yzloanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yzloanUITests.m; sourceTree = "<group>"; };
 		72734EB921C916DA00DC1E50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C614E621CDEB9F00859A8F /* KeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyChainStore.h; sourceTree = "<group>"; };
+		72C614E721CDEB9F00859A8F /* KeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyChainStore.m; sourceTree = "<group>"; };
+		72C614E821CDEB9F00859A8F /* NSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSUtil.h; sourceTree = "<group>"; };
+		72C614E921CDEB9F00859A8F /* NSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUtil.m; sourceTree = "<group>"; };
+		72D79F1821CFD4F1001E5313 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		72D79F1921CFD4F1001E5313 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		72F16DD321CBAD8900F85AE2 /* back_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_gray.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +112,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		720262D921CCFCCA006664FF /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				720262DA21CCFCCA006664FF /* WebViewJavascriptBridge.h */,
+				720262DB21CCFCCA006664FF /* WebViewJavascriptBridge.m */,
+				720262DC21CCFCCA006664FF /* WebViewJavascriptBridge_JS.h */,
+				720262DD21CCFCCA006664FF /* WebViewJavascriptBridge_JS.m */,
+				720262DE21CCFCCA006664FF /* WebViewJavascriptBridgeBase.h */,
+				720262DF21CCFCCA006664FF /* WebViewJavascriptBridgeBase.m */,
+				720262E021CCFCCA006664FF /* WKWebViewJavascriptBridge.h */,
+				720262E121CCFCCA006664FF /* WKWebViewJavascriptBridge.m */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		7247E86B21CB9E30008DE09A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72D79F1821CFD4F1001E5313 /* MBProgressHUD.h */,
+				72D79F1921CFD4F1001E5313 /* MBProgressHUD.m */,
+				7247E86C21CB9EB7008DE09A /* CustomNavigationView.h */,
+				7247E86D21CB9EB7008DE09A /* CustomNavigationView.m */,
+				7247E86F21CBA7B1008DE09A /* BackButton.h */,
+				7247E87021CBA7B1008DE09A /* BackButton.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		72734E8621C916DA00DC1E50 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +163,18 @@
 		72734E9121C916DA00DC1E50 /* yzloan */ = {
 			isa = PBXGroup;
 			children = (
+				72C614E521CDEB9000859A8F /* Utils */,
+				720262D921CCFCCA006664FF /* WebViewJavascriptBridge */,
+				7247E86B21CB9E30008DE09A /* View */,
 				72734E9521C916DA00DC1E50 /* AppDelegate.h */,
 				72734E9621C916DA00DC1E50 /* AppDelegate.m */,
+				72182CF821CF59C400E09662 /* example.html */,
 				72734E9821C916DA00DC1E50 /* ViewController.h */,
 				72734E9921C916DA00DC1E50 /* ViewController.m */,
+				72182CF421CF148300E09662 /* YZWebViewController.h */,
+				72182CF521CF148300E09662 /* YZWebViewController.m */,
 				72734E9B21C916DA00DC1E50 /* Main.storyboard */,
+				72F16DD321CBAD8900F85AE2 /* back_gray.png */,
 				72734E9E21C916DA00DC1E50 /* Assets.xcassets */,
 				72734EA021C916DA00DC1E50 /* LaunchScreen.storyboard */,
 				72734EA321C916DA00DC1E50 /* Info.plist */,
@@ -138,6 +207,17 @@
 				72734EB921C916DA00DC1E50 /* Info.plist */,
 			);
 			path = yzloanUITests;
+			sourceTree = "<group>";
+		};
+		72C614E521CDEB9000859A8F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				72C614E621CDEB9F00859A8F /* KeyChainStore.h */,
+				72C614E721CDEB9F00859A8F /* KeyChainStore.m */,
+				72C614E821CDEB9F00859A8F /* NSUtil.h */,
+				72C614E921CDEB9F00859A8F /* NSUtil.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +288,7 @@
 					72734E8E21C916DA00DC1E50 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = HVZ7STF5BG;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					72734EA721C916DA00DC1E50 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -247,9 +327,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72182CF921CF59C400E09662 /* example.html in Resources */,
 				72734EA221C916DA00DC1E50 /* LaunchScreen.storyboard in Resources */,
 				72734E9F21C916DA00DC1E50 /* Assets.xcassets in Resources */,
 				72734E9D21C916DA00DC1E50 /* Main.storyboard in Resources */,
+				72F16DD421CBAD8900F85AE2 /* back_gray.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +356,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C614EB21CDEB9F00859A8F /* NSUtil.m in Sources */,
+				720262E421CCFCCA006664FF /* WebViewJavascriptBridgeBase.m in Sources */,
 				72734E9A21C916DA00DC1E50 /* ViewController.m in Sources */,
+				720262E221CCFCCA006664FF /* WebViewJavascriptBridge.m in Sources */,
 				72734E9721C916DA00DC1E50 /* AppDelegate.m in Sources */,
+				720262E321CCFCCA006664FF /* WebViewJavascriptBridge_JS.m in Sources */,
+				720262E521CCFCCA006664FF /* WKWebViewJavascriptBridge.m in Sources */,
 				72734E9421C916DA00DC1E50 /* main.m in Sources */,
+				72182CF621CF148300E09662 /* YZWebViewController.m in Sources */,
+				72D79F1A21CFD4F1001E5313 /* MBProgressHUD.m in Sources */,
+				7247E86E21CB9EB7008DE09A /* CustomNavigationView.m in Sources */,
+				7247E87121CBA7B1008DE09A /* BackButton.m in Sources */,
+				72C614EA21CDEB9F00859A8F /* KeyChainStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,11 +515,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HVZ7STF5BG;
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "48a19407-9639-49c5-a3af-b4148334a039";
+				PROVISIONING_PROFILE_SPECIFIER = development_ios;
 			};
 			name = Debug;
 		};
@@ -435,11 +531,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = HVZ7STF5BG;
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "755ab5e4-fd39-4487-8c73-c0c2eb5a290f";
+				PROVISIONING_PROFILE_SPECIFIER = adHoc_yinzhong;
 			};
 			name = Release;
 		};
@@ -508,6 +608,7 @@
 				72734EBE21C916DA00DC1E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72734EBF21C916DA00DC1E50 /* Build configuration list for PBXNativeTarget "yzloanTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +617,7 @@
 				72734EC121C916DA00DC1E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72734EC221C916DA00DC1E50 /* Build configuration list for PBXNativeTarget "yzloanUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +626,7 @@
 				72734EC421C916DA00DC1E50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
