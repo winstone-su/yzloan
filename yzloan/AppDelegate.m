@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import <UMAnalytics/MobClick.h>
+#import <UMCommonLog/UMCommonLogHeaders.h>
+#import <UMCommon/UMCommon.h>
 @interface AppDelegate ()
 
 @end
@@ -18,17 +20,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    ViewController *mainView = [[ViewController alloc]init];
+    [UMCommonLogManager setUpUMCommonLogManager];
+    [UMConfigure setLogEnabled:YES];
     
-//    UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:mainView];
+    [UMConfigure initWithAppkey:@"5c236b4bb465f5cc900002e4" channel:@"iOS"];
+    [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
+    
+    //此函数在UMCommon.framework版本1.4.2及以上版本，在UMConfigure.h的头文件中加入。
+    //如果用户用组件化SDK,需要升级最新的UMCommon.framework版本。
+    NSString* deviceID =  [UMConfigure deviceIDForIntegration];
+    NSLog(@"集成测试的deviceID:%@",deviceID);
+    
+    
+//    //老版本iOS统计SDK请使用如下代码段：
+//    Class cls = NSClassFromString(@"UMANUtil");
+//    SEL deviceIDSelector = @selector(openUDIDString);
+//    NSString *deviceID = nil;
+//    if(cls && [cls respondsToSelector:deviceIDSelector]){
+//        deviceID = [cls performSelector:deviceIDSelector];
+//    }
+//    NSData* jsonData = [NSJSONSerialization dataWithJSONObject:@{@"oid" : deviceID}
+//                                                       options:NSJSONWritingPrettyPrinted
+//                                                         error:nil];
+//    NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
 //    
-//    navi.navigationBar.backgroundColor = [UIColor whiteColor];
-//    
-//    [self.window setRootViewController:navi];
-//    
-//    [self.window makeKeyAndVisible];
-//    [NSThread sleepForTimeInterval:2.0];
-//    NSLog(@"didfinish");
+
     return YES;
 }
 

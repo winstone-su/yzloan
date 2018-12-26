@@ -35,6 +35,8 @@
     [super viewDidLoad];
     NSLog(@"viewdidload");
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated

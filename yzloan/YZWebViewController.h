@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 
-@interface YZWebViewViewController : UIViewController<UIWebViewDelegate>
+@interface YZWebViewViewController : UIViewController<UIWebViewDelegate,WKUIDelegate,WKNavigationDelegate>
 
 @property (nonatomic,strong) UIWebView *webView;
+
+@property (nonatomic,strong) WKWebView *wkWebView;
 
 -(id)initWithDict:(NSDictionary *)dict;
 

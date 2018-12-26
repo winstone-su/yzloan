@@ -11,6 +11,14 @@
 		720262E321CCFCCA006664FF /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262DD21CCFCCA006664FF /* WebViewJavascriptBridge_JS.m */; };
 		720262E421CCFCCA006664FF /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262DF21CCFCCA006664FF /* WebViewJavascriptBridgeBase.m */; };
 		720262E521CCFCCA006664FF /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 720262E121CCFCCA006664FF /* WKWebViewJavascriptBridge.m */; };
+		720AAF4321D3AC6A00817F4F /* UMAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4121D3AC6A00817F4F /* UMAnalytics.framework */; };
+		720AAF4421D3AC6A00817F4F /* UMCommonLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4221D3AC6A00817F4F /* UMCommonLog.framework */; };
+		720AAF4721D3AECE00817F4F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4621D3AECE00817F4F /* libz.tbd */; };
+		720AAF4921D3AED700817F4F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4821D3AED700817F4F /* libsqlite3.tbd */; };
+		720AAF4B21D3AEE200817F4F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4A21D3AEE200817F4F /* CoreTelephony.framework */; };
+		720AAF4D21D3AEEC00817F4F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF4C21D3AEEC00817F4F /* SystemConfiguration.framework */; };
+		720AAF4F21D3AFA500817F4F /* UMCommonLog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 720AAF4E21D3AFA500817F4F /* UMCommonLog.bundle */; };
+		720AAF5121D3B00D00817F4F /* UMCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AAF5021D3B00D00817F4F /* UMCommon.framework */; };
 		72182CF621CF148300E09662 /* YZWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72182CF521CF148300E09662 /* YZWebViewController.m */; };
 		72182CF921CF59C400E09662 /* example.html in Resources */ = {isa = PBXBuildFile; fileRef = 72182CF821CF59C400E09662 /* example.html */; };
 		7247E86E21CB9EB7008DE09A /* CustomNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7247E86D21CB9EB7008DE09A /* CustomNavigationView.m */; };
@@ -55,6 +63,14 @@
 		720262DF21CCFCCA006664FF /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
 		720262E021CCFCCA006664FF /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		720262E121CCFCCA006664FF /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		720AAF4121D3AC6A00817F4F /* UMAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMAnalytics.framework; sourceTree = "<group>"; };
+		720AAF4221D3AC6A00817F4F /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommonLog.framework; sourceTree = "<group>"; };
+		720AAF4621D3AECE00817F4F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		720AAF4821D3AED700817F4F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		720AAF4A21D3AEE200817F4F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		720AAF4C21D3AEEC00817F4F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		720AAF4E21D3AFA500817F4F /* UMCommonLog.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMCommonLog.bundle; sourceTree = "<group>"; };
+		720AAF5021D3B00D00817F4F /* UMCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCommon.framework; sourceTree = "<group>"; };
 		72182CF421CF148300E09662 /* YZWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZWebViewController.h; sourceTree = "<group>"; };
 		72182CF521CF148300E09662 /* YZWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZWebViewController.m; sourceTree = "<group>"; };
 		72182CF821CF59C400E09662 /* example.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = example.html; sourceTree = "<group>"; };
@@ -92,6 +108,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				720AAF4D21D3AEEC00817F4F /* SystemConfiguration.framework in Frameworks */,
+				720AAF4B21D3AEE200817F4F /* CoreTelephony.framework in Frameworks */,
+				720AAF4921D3AED700817F4F /* libsqlite3.tbd in Frameworks */,
+				720AAF5121D3B00D00817F4F /* UMCommon.framework in Frameworks */,
+				720AAF4721D3AECE00817F4F /* libz.tbd in Frameworks */,
+				720AAF4421D3AC6A00817F4F /* UMCommonLog.framework in Frameworks */,
+				720AAF4321D3AC6A00817F4F /* UMAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +150,28 @@
 			path = WebViewJavascriptBridge;
 			sourceTree = "<group>";
 		};
+		720AAF4021D3AC6A00817F4F /* Umeng */ = {
+			isa = PBXGroup;
+			children = (
+				720AAF5021D3B00D00817F4F /* UMCommon.framework */,
+				720AAF4E21D3AFA500817F4F /* UMCommonLog.bundle */,
+				720AAF4121D3AC6A00817F4F /* UMAnalytics.framework */,
+				720AAF4221D3AC6A00817F4F /* UMCommonLog.framework */,
+			);
+			path = Umeng;
+			sourceTree = "<group>";
+		};
+		720AAF4521D3AECE00817F4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				720AAF4C21D3AEEC00817F4F /* SystemConfiguration.framework */,
+				720AAF4A21D3AEE200817F4F /* CoreTelephony.framework */,
+				720AAF4821D3AED700817F4F /* libsqlite3.tbd */,
+				720AAF4621D3AECE00817F4F /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7247E86B21CB9E30008DE09A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +192,7 @@
 				72734EAB21C916DA00DC1E50 /* yzloanTests */,
 				72734EB621C916DA00DC1E50 /* yzloanUITests */,
 				72734E9021C916DA00DC1E50 /* Products */,
+				720AAF4521D3AECE00817F4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +209,7 @@
 		72734E9121C916DA00DC1E50 /* yzloan */ = {
 			isa = PBXGroup;
 			children = (
+				720AAF4021D3AC6A00817F4F /* Umeng */,
 				72C614E521CDEB9000859A8F /* Utils */,
 				720262D921CCFCCA006664FF /* WebViewJavascriptBridge */,
 				7247E86B21CB9E30008DE09A /* View */,
@@ -330,6 +377,7 @@
 				72182CF921CF59C400E09662 /* example.html in Resources */,
 				72734EA221C916DA00DC1E50 /* LaunchScreen.storyboard in Resources */,
 				72734E9F21C916DA00DC1E50 /* Assets.xcassets in Resources */,
+				720AAF4F21D3AFA500817F4F /* UMCommonLog.bundle in Resources */,
 				72734E9D21C916DA00DC1E50 /* Main.storyboard in Resources */,
 				72F16DD421CBAD8900F85AE2 /* back_gray.png in Resources */,
 			);
@@ -518,6 +566,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HVZ7STF5BG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yzloan/Umeng",
+				);
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;
@@ -534,6 +587,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = HVZ7STF5BG;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yzloan/Umeng",
+				);
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;

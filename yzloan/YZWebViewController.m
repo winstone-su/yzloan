@@ -58,6 +58,33 @@
     //获取导航栏的rect
     [self.webView loadRequest:request];
     self.webView.delegate = self;
+    
+//    [self.view addSubview:self.wkWebView];
+//    self.wkWebView.UIDelegate = self;
+//    self.wkWebView.navigationDelegate  = self;
+//    [self.wkWebView loadRequest:request];
+}
+
+- (WKWebView *)wkWebView
+{
+    if(!_wkWebView){
+        _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, self.customerNavigationView.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height - self.customerNavigationView.bounds.size.height)];
+    }
+    
+    return _wkWebView;
+}
+
+-(WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures
+{
+    if (!navigationAction.targetFrame.isMainFrame) {
+        [webView loadRequest:navigationAction.request];
+    }
+    return nil;
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)didReceiveMemoryWarning {
