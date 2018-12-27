@@ -21,15 +21,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UMCommonLogManager setUpUMCommonLogManager];
-    [UMConfigure setLogEnabled:YES];
+//    [UMConfigure setLogEnabled:YES];
     
     [UMConfigure initWithAppkey:@"5c236b4bb465f5cc900002e4" channel:@"iOS"];
     [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
     
     //此函数在UMCommon.framework版本1.4.2及以上版本，在UMConfigure.h的头文件中加入。
     //如果用户用组件化SDK,需要升级最新的UMCommon.framework版本。
-    NSString* deviceID =  [UMConfigure deviceIDForIntegration];
-    NSLog(@"集成测试的deviceID:%@",deviceID);
+//    NSString* deviceID =  [UMConfigure deviceIDForIntegration];
+//    NSLog(@"集成测试的deviceID:%@",deviceID);
     
     
 //    //老版本iOS统计SDK请使用如下代码段：

@@ -51,18 +51,18 @@
         self.customerNavigationView.titleLabel.text = title;
     }
     
-    [self.view addSubview:self.webView];
+//    [self.view addSubview:self.webView];
     NSString *urlString = [self.dataDict objectForKey:@"productUrl"];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //获取导航栏的rect
-    [self.webView loadRequest:request];
+//    [self.webView loadRequest:request];
     self.webView.delegate = self;
     
-//    [self.view addSubview:self.wkWebView];
-//    self.wkWebView.UIDelegate = self;
-//    self.wkWebView.navigationDelegate  = self;
-//    [self.wkWebView loadRequest:request];
+    [self.view addSubview:self.wkWebView];
+    self.wkWebView.UIDelegate = self;
+    self.wkWebView.navigationDelegate  = self;
+    [self.wkWebView loadRequest:request];
 }
 
 - (WKWebView *)wkWebView
@@ -80,11 +80,6 @@
         [webView loadRequest:navigationAction.request];
     }
     return nil;
-}
-
-- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
-{
-    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -126,5 +121,109 @@
 //    }
 //    self.customerNavigationView.titleLabel.text= title;
 }
+
+
+/**
+webView中弹出警告框时调用, 只能有一个按钮
+
+@param webView webView
+@param message 提示信息
+@param frame 可用于区分哪个窗口调用的
+@param completionHandler 警告框消失的时候调用, 回调给JS
+*/
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"警告" message:message preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"我知道了" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler();
+    }];
+    
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+/** 对应js的confirm方法
+ webView中弹出选择框时调用, 两个按钮
+ 
+ @param webView webView description
+ @param message 提示信息
+ @param frame 可用于区分哪个窗口调用的
+ @param completionHandler 确认框消失的时候调用, 回调给JS, 参数为选择结果: YES or NO
+ */
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL result))completionHandler {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请选择" message:message preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"同意" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(YES);
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"不同意" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(NO);
+    }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+/** 对应js的prompt方法
+ webView中弹出输入框时调用, 两个按钮 和 一个输入框
+ 
+ @param webView webView description
+ @param prompt 提示信息
+ @param defaultText 默认提示文本
+ @param frame 可用于区分哪个窗口调用的
+ @param completionHandler 输入框消失的时候调用, 回调给JS, 参数为输入的内容
+ */
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(nullable NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString * _Nullable result))completionHandler {
+    
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"请输入" message:prompt preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"请输入";
+    }];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        
+        UITextField *tf = [alert.textFields firstObject];
+        
+        completionHandler(tf.text);
+    }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:^(UIAlertAction * _Nonnull action) {
+        completionHandler(defaultText);
+    }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler{
+    //  在发送请求之前，决定是否跳转
+    NSURL *url = navigationAction.request.URL;
+    NSString *urlString = navigationAction.request.URL.absoluteString;
+    if([urlString hasPrefix:@"itms-services://"]){
+        if([[UIApplication sharedApplication] canOpenURL:url]){
+            [[UIApplication sharedApplication] openURL:url options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES} completionHandler:nil ];
+        }
+    }
+    decisionHandler(WKNavigationActionPolicyAllow);
+}
+
+// 是否接收响应
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler{
+    // 在收到响应后，决定是否跳转和发送请求之前那个允许配套使用
+    decisionHandler(WKNavigationResponsePolicyAllow);
+}
+
+//用于授权验证的API，与AFN、UIWebView的授权验证API是一样的
+- (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *__nullable credential))completionHandler{
+    
+    completionHandler(NSURLSessionAuthChallengePerformDefaultHandling ,nil);
+}
+
 
 @end

@@ -77,6 +77,7 @@
 
 - (void)loadRequest
 {
+//    NSString *urlString = @"http://app.91feixiong.com/cashkoi/index.html?atype=1";
     NSString *urlString = @"http://app.yioucash.com/test/index.html";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -110,9 +111,6 @@
 -(WKWebView *)wkWebView
 {
     if(!_wkWebView){
-//        CGFloat statusRectHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-//        _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(UIMainScreen.origin.x,UIMainScreen.origin.y,UIMainScreen.size.width,UIMainScreen.size.height)];
-//        _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds];
         _wkWebView = [[WKWebView alloc] initWithFrame:CGRectMake(0, self.navigationView.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height - self.navigationView.bounds.size.height)];
         [self.view addSubview:_wkWebView];
     }
