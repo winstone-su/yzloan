@@ -17,6 +17,7 @@ DerivedData
 *.xccheckout
 *.xcworkspace
 !default.xcworkspace
+*.xcuserstate
 
 
 *.a       # 忽略所有 .a 结尾的文件            
