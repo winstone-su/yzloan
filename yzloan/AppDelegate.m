@@ -23,7 +23,7 @@
     [UMCommonLogManager setUpUMCommonLogManager];
 //    [UMConfigure setLogEnabled:YES];
     
-    [UMConfigure initWithAppkey:@"5c236b4bb465f5cc900002e4" channel:@"iOS"];
+    [UMConfigure initWithAppkey:@"5c236b1fb465f5d46d000443" channel:@"iOS"];
     [MobClick setScenarioType:E_UM_GAME|E_UM_DPLUS];
     
     //此函数在UMCommon.framework版本1.4.2及以上版本，在UMConfigure.h的头文件中加入。

@@ -573,7 +573,7 @@
 				);
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.H5ECD0433;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "48a19407-9639-49c5-a3af-b4148334a039";
 				PROVISIONING_PROFILE_SPECIFIER = development_ios;
@@ -594,10 +594,10 @@
 				);
 				INFOPLIST_FILE = yzloan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yinzhong.yzloan;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dcloud.H5ECD0433;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "755ab5e4-fd39-4487-8c73-c0c2eb5a290f";
-				PROVISIONING_PROFILE_SPECIFIER = adHoc_yinzhong;
+				PROVISIONING_PROFILE = "1bc5b5ca-b87e-4fae-95a8-27acf271c4bc";
+				PROVISIONING_PROFILE_SPECIFIER = adHoc_xiaoxiongloan_Distribution;
 			};
 			name = Release;
 		};

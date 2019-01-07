@@ -77,7 +77,10 @@
 
 - (void)loadRequest
 {
-    NSString *urlString = @"http://app.91feixiong.com/cashkoi/index.html?atype=1";
+    //现金锦鲤
+//    NSString *urlString = @"http://app.91feixiong.com/cashkoi/index.html?atype=1";
+    //小熊速贷
+    NSString *urlString = @"http://app.91feixiong.com/xxloan/index.html";
 //    NSString *urlString = @"http://app.yioucash.com/test/index.html";
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
